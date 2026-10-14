@@ -11,6 +11,26 @@
 .prompt q{display:block;font:400 14px/1.75 var(--sans);color:var(--muted)}
 .robot-card-link{position:absolute;inset:0;z-index:5;cursor:pointer}
 .robot-card:focus-within{outline:2px solid var(--lime);outline-offset:4px}
+.principle-grid article{
+  position:relative;
+  z-index:0;
+  transform:translateZ(0);
+  transform-origin:center;
+  transition:transform .32s cubic-bezier(.2,.75,.25,1),box-shadow .32s ease,background-color .32s ease,border-color .32s ease;
+}
+@media(hover:hover) and (pointer:fine){
+  .principle-grid article:hover{
+    z-index:2;
+    transform:translateY(-7px) scale(1.015);
+    background:#fff;
+    border-color:transparent;
+    box-shadow:0 22px 48px rgba(36,31,24,.14),0 7px 16px rgba(36,31,24,.08);
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .principle-grid article{transition:none}
+  .principle-grid article:hover{transform:none}
+}
 @media(max-width:620px){
   .task-row{grid-template-columns:1fr;padding:20px;gap:8px}
   .task-detail{grid-template-columns:1fr}
