@@ -9,6 +9,8 @@
 .prompt{display:block;margin-top:10px;padding:16px 18px;background:#efebe2;color:var(--ink)}
 .prompt strong{display:block;margin:0 0 8px;color:var(--ink);font:700 10px var(--sans)}
 .prompt q{display:block;font:400 14px/1.75 var(--sans);color:var(--muted)}
+.robot-card-link{position:absolute;inset:0;z-index:5;cursor:pointer}
+.robot-card:focus-within{outline:2px solid var(--lime);outline-offset:4px}
 @media(max-width:620px){
   .task-row{grid-template-columns:1fr;padding:20px;gap:8px}
   .task-detail{grid-template-columns:1fr}
