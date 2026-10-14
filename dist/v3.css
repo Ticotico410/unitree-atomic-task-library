@@ -1,0 +1,11 @@
+.toolbar{grid-template-columns:2fr 1.3fr auto}
+.family-card{min-height:370px}
+.example-label{font:10px var(--mono);color:var(--orange);margin:2px 0 8px}
+.family-examples.dream-examples{display:block;margin-top:0;font-size:12px;line-height:1.8;color:#5f665c}
+.dream-examples i{font-style:normal;color:var(--orange);padding:0 2px}
+.badge.universal{background:#ebf8c9;border-color:#d8eba6;color:#506b0b}
+.dialog-eg{background:#efebe2;border:1px solid #dfdbd0;padding:14px 16px;margin:-10px 0 26px;font-size:12px;line-height:1.8;color:#555d52}
+.dialog-eg strong{font:10px var(--mono);color:var(--orange);margin-right:10px}
+.dialog-eg i{font-style:normal;color:var(--orange);padding:0 4px}
+@media(max-width:940px){.toolbar{grid-template-columns:2fr 1fr auto}.toolbar .search{grid-column:auto}}
+@media(max-width:620px){.toolbar{grid-template-columns:1fr}}

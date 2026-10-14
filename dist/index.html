@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="面向 Unitree G1-D 与 R1-A7-D 半身人形机器人的 12 类桌面场景、20 种任务类别原子操作任务库。" />
+  <title>Unitree 桌面原子任务库</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="v3.css" />
+  <link rel="stylesheet" href="hero-v9.css" />
+  <link rel="stylesheet" href="theme-v12.css" />
+  <link rel="stylesheet" href="theme-v13.css" />
+  <link rel="stylesheet" href="theme-v15.css" />
+  <link rel="stylesheet" href="theme-v16.css" />
+  <link rel="stylesheet" href="theme-v18.css" />
+  <link rel="stylesheet" href="theme-v27.css" />
+  <link rel="stylesheet" href="theme-v34.css" />
+</head>
+<body>
+  <header class="hero" id="top">
+    <nav class="nav shell">
+      <a class="brand unitree-brand" href="https://www.unitree.com/cn" target="_blank" rel="noreferrer" aria-label="访问 Unitree 官方网站"><img src="assets/unitree-logo.svg" alt="Unitree" /></a>
+      <div class="nav-meta"><span>12 SCENES</span><span>20 FAMILIES</span><span>200 TASKS</span></div>
+    </nav>
+    <div class="hero-grid shell">
+      <div class="hero-copy">
+        <h1>桌面操作<br><span>原子任务库</span></h1>
+        <p class="lede">本数据集基于宇树 G1-D 与 R1-A7-D 半身人形机器人构建，采用 Dex1 夹爪与 6DoF 灵巧手两类末端执行器，覆盖 <strong class="hero-inline-link">12 类桌面操作场景</strong>、<strong class="hero-inline-link">20 种任务类别及原子操作任务库</strong>，面向日常生活、办公、工业、医疗等多领域桌面操作需求，为机器人大模型训练提供多样化数据支持。</p>
+        <div class="hero-actions"><a class="button primary hero-browse hero-scenes" href="#scenes"><span>浏览桌面操作场景</span><b>↘</b></a><a class="button primary hero-browse hero-families" href="#families"><span>浏览任务类别及原子任务库</span><b>↘</b></a></div>
+      </div>
+      <div class="hero-visual robot-stage" aria-label="G1-D 与 R1-A7-D 半身人形机器人">
+        <div class="stage-grid" aria-hidden="true"></div>
+        <div class="stage-code" aria-hidden="true"><span>DUAL ARM</span><span>TABLETOP</span><span>DATASET</span></div>
+        <figure class="robot-card robot-g1">
+          <img src="assets/g1-d-v2.png" alt="Unitree G1-D 半身人形机器人" />
+          <figcaption><span>EMBODIMENT / 01</span><strong>G1-D</strong></figcaption>
+        </figure>
+        <figure class="robot-card robot-r1">
+          <img src="assets/r1-a7-d-v2.png" alt="Unitree R1-A7-D 半身人形机器人" />
+          <figcaption><span>EMBODIMENT / 02</span><strong>R1-A7-D</strong></figcaption>
+        </figure>
+        <div class="stage-status"><i></i><span>SHARED TASK SPACE</span><b>200 ATOMIC TASKS</b></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="scenes" id="scenes">
+      <div class="shell">
+        <div class="section-heading split scenes-head"><div><p class="eyebrow">TABLETOP ENVIRONMENT TAXONOMY</p><h2><span class="heading-number">12</span> 类桌面操作场景</h2></div><p>每类场景统一规划桌面分区与基础物件配置，在保证原子任务稳定采集的同时，引入跨环境的视觉与语义差异，为机器人操作模型提供更具泛化性的训练数据。</p></div>
+        <div class="scene-grid">
+          <article class="scene-card" data-materials="遥控器、杂志、塑料杯、收纳盒、玩具、托盘、杯垫"><span class="scene-number">SCENE 01</span><h3>家庭客厅茶几桌面</h3><p class="scene-position"><b>场景定位</b>模拟家庭日常生活中的桌面整理需求，覆盖自然物品分布与非结构化操作环境。</p><p class="scene-layout"><b>空间特征</b>桌面划分主要操作区、物品暂存区与收纳区域，保持真实家庭布局变化。</p></article>
+          <article class="scene-card" data-materials="书籍、文件夹、计算器、键盘托板、粗杆文具、U 盘模型、理线环"><span class="scene-number">SCENE 02</span><h3>书房学习桌面</h3><p class="scene-position"><b>场景定位</b>模拟办公学习环境中的物品管理任务，覆盖文档、设备与个人用品交互场景。</p><p class="scene-layout"><b>空间特征</b>桌面包含工作区域、设备区域与资料区域，形成稳定但具有变化性的操作空间。</p></article>
+          <article class="scene-card" data-materials="打印资料、硬壳文件夹、文件托盘、便签、激光笔、笔座、水杯"><span class="scene-number">SCENE 03</span><h3>办公会议桌面</h3><p class="scene-position"><b>场景定位</b>模拟企业办公环境中的资料整理与设备交互需求。</p><p class="scene-layout"><b>空间特征</b>围绕文件处理区域、设备区域和协作区域进行布局设计，支持多类型桌面任务。</p></article>
+          <article class="scene-card" data-materials="塑料碗盘杯、粗柄餐具、菜单、餐巾、调味瓶、食品包装盒"><span class="scene-number">SCENE 04</span><h3>餐厅餐桌桌面</h3><p class="scene-position"><b>场景定位</b>模拟餐饮服务与家庭用餐中的桌面交互场景。</p><p class="scene-layout"><b>空间特征</b>围绕餐具区域、饮品区域和共享区域设计，体现多物体空间关系。</p></article>
+          <article class="scene-card" data-materials="砧板、保鲜盒、塑料碗、调味瓶、食品盒、防滑垫、清洁布"><span class="scene-number">SCENE 05</span><h3>家庭厨房操作台</h3><p class="scene-position"><b>场景定位</b>模拟家庭备餐过程中的工具与物品管理场景。</p><p class="scene-layout"><b>空间特征</b>划分食材处理区、工具区和容器区，形成典型厨房工作流布局。</p></article>
+          <article class="scene-card" data-materials="纸盒商品、固定扫描器、纸质购物袋、训练钱盒、价签、收纳托盘"><span class="scene-number">SCENE 06</span><h3>便利店收银台</h3><p class="scene-position"><b>场景定位</b>模拟零售环境中的商品处理与桌面交互任务。</p><p class="scene-layout"><b>空间特征</b>包含商品暂存区、处理区和包装区，体现商业场景中的物品流转关系。</p></article>
+          <article class="scene-card" data-materials="登记表、房卡盒、钥匙盒、宣传册、文件架、服务铃、托盘"><span class="scene-number">SCENE 07</span><h3>酒店服务台</h3><p class="scene-position"><b>场景定位</b>模拟服务行业中的资料处理与物品管理场景。</p><p class="scene-layout"><b>空间特征</b>围绕客户交互区、资料区和设备区进行布局规划。</p></article>
+          <article class="scene-card" data-materials="手套盒、口罩盒、空药盒、空药瓶、试管架、登记表、医疗托盘"><span class="scene-number">SCENE 08</span><h3>医院护士站</h3><p class="scene-position"><b>场景定位</b>模拟医疗辅助环境中的信息管理与物品整理场景。</p><p class="scene-layout"><b>空间特征</b>划分文件处理区、医疗用品区和暂存区，保持规范化工作台布局。</p></article>
+          <article class="scene-card" data-materials="空药瓶、药盒、分类盒、药品托盘、标签卡、量杯、宽孔训练架"><span class="scene-number">SCENE 09</span><h3>药房配药台</h3><p class="scene-position"><b>场景定位</b>模拟药品管理与分类处理场景。</p><p class="scene-layout"><b>空间特征</b>采用药品存放区、处理区和包装区的工作台布局。</p></article>
+          <article class="scene-card" data-materials="小纸箱、快递袋、分类盒、工具盒、标签卡、大号接头、包装材料"><span class="scene-number">SCENE 10</span><h3>仓储物流工作台</h3><p class="scene-position"><b>场景定位</b>模拟仓储分拣与零件管理环境。</p><p class="scene-layout"><b>空间特征</b>包含分类区、工具区和包装区，体现工业桌面操作特点。</p></article>
+          <article class="scene-card" data-materials="零件托盘、训练垫片、收纳盒、粗柄工具、导向座、样件、检验卡"><span class="scene-number">SCENE 11</span><h3>工业质检装配台</h3><p class="scene-position"><b>场景定位</b>模拟工业生产中的检测、装配与零件管理任务。</p><p class="scene-layout"><b>空间特征</b>划分检测区、装配区和工具区，支持精细化操作学习。</p></article>
+          <article class="scene-card" data-materials="大号积木、拼图底板、磁吸块、彩色卡片、纸张、胶棒、分区托盘"><span class="scene-number">SCENE 12</span><h3>玩具/手工制作桌面</h3><p class="scene-position"><b>场景定位</b>模拟创意制作与零件组合类桌面操作场景。</p><p class="scene-layout"><b>空间特征</b>包含材料区、工具区和成品区，体现多步骤交互空间。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="library" id="families">
+      <div class="shell">
+        <div class="section-heading split library-head"><div><p class="eyebrow">MANIPULATION TAXONOMY</p><h2><span class="heading-number">20</span> 个任务类别</h2></div><p>覆盖机器人桌面操作中的核心技能维度，将复杂任务拆解为 20 类操作类别与原子任务集合，支持双臂机器人操作能力学习与泛化。</p></div>
+        <div class="toolbar scene-toolbar">
+          <label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="搜索类别、任务、物品或场景…" /></label>
+          <label><span>附件场景</span><select id="sceneFilter"><option value="all">全部 12 个场景</option></select></label>
+          <button id="resetBtn" class="reset">重置</button>
+        </div>
+        <div class="family-grid" id="familyGrid"></div>
+        <div class="empty-state" id="emptyState" hidden><span>∅</span><h3>没有匹配的任务类别</h3><p>尝试更换关键词或重置筛选。</p></div>
+        <p class="data-format-note"><strong>数据格式：</strong>所有 Episode 均按照 <a href="https://github.com/huggingface/lerobot/pull/711" target="_blank" rel="noreferrer">LeRobot v2.1</a> 数据格式进行保存。</p>
+      </div>
+    </section>
+
+    <section class="collection protocol-section shell">
+      <div class="section-heading"><p class="eyebrow">COLLECTION TEMPLATE</p><h2>Episode 结构规范</h2></div>
+      <div class="collection-grid protocol-grid">
+        <article><span>START</span><h3>明确初始状态</h3><strong>定义任务开始时的标准场景状态：</strong><p>目标物体、相关容器和操作区域均清晰可见；物体位姿保持合理随机性，机器人处于安全工作空间内；开始动作前保持短暂静止，确保视觉观测稳定。</p></article>
+        <article><span>END</span><h3>保持任务终态</h3><strong>定义任务完成后的稳定状态：</strong><p>任务目标达成后保持最终状态 1–2 秒，不主动复位、不整理环境、不开始下一任务，确保动作结果和状态变化清晰记录。</p></article>
+        <article><span>ACTION</span><h3>完成单一操作目标</h3><strong>每条 Episode 聚焦一个明确操作目标：</strong><p>机器人根据任务指令完成一次连续操作过程，保持自然运动速度；允许必要的调整与重新抓取，但避免引入额外无关任务。</p></article>
+        <article><span>LABEL</span><h3>语言任务描述</h3><strong>为每条 Episode 提供简洁语义标签：</strong><p>采用“动作 + 物体 + 目标状态/位置”的形式描述任务，例如：</p><ul><li>将杯子放到托盘上</li><li>把红色盒子移动到左侧区域</li><li>将文件放入文件夹</li></ul></article>
+      </div>
+    </section>
+
+    <section class="quality">
+      <div class="shell">
+        <div class="section-heading"><p class="eyebrow">QUALITY CRITERIA</p><h2>Episode 质量标准</h2></div>
+        <div class="collection-grid protocol-grid quality-grid">
+          <article><span>TASK CONSISTENCY</span><h3>单一任务目标</h3><p>每条 Episode 聚焦一个原子操作目标，避免包含多个连续任务或无关动作；任务描述、视觉场景与机器人行为保持语义一致。</p></article>
+          <article><span>MOTION QUALITY</span><h3>自然操作过程</h3><p>保留机器人完成任务的完整运动过程，包括必要的调整、定位和抓取过程；动作轨迹应连续平滑，避免人为干预或异常停顿。</p></article>
+          <article><span>OBSERVATION QUALITY</span><h3>清晰视觉观测</h3><p>确保目标物体、关键区域和操作结果均处于有效视野范围内；保持多视角观测稳定，减少遮挡、模糊和无关干扰。</p></article>
+          <article><span>TASK COMPLETION</span><h3>明确任务结果</h3><p>Episode 结束时应形成清晰、可验证的任务结果；最终状态稳定保持，便于模型学习动作与环境变化之间的对应关系。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sources design-philosophy shell">
+      <div class="section-heading split"><div><p class="eyebrow">DATASET DESIGN PHILOSOPHY</p><h2>数据集设计理念</h2></div><p>本数据集结合具身智能领域的数据构建经验，围绕真实场景多样性、任务原子化、语言语义对齐与统一采集规范进行设计，构建适用于双臂机器人学习的高质量操作数据。</p></div>
+      <div class="principle-grid">
+        <article><span>01</span><h3>多样化场景设计</h3><p>覆盖家庭、办公、工业、医疗等真实桌面环境，通过场景布局、物体组合与视觉变化提升数据泛化能力。</p></article>
+        <article><span>02</span><h3>单任务 Episode 规范</h3><p>每条 Episode 聚焦单一操作目标，保持明确初始状态、连续动作过程与稳定任务终态。</p></article>
+        <article><span>03</span><h3>原子技能拆解</h3><p>将复杂操作拆解为可复用的基础技能单元，覆盖抓取、放置、整理、交互与装配等核心机器人能力。</p></article>
+        <article><span>04</span><h3>多模态数据组织</h3><p>统一采集视觉观测、机器人状态、动作轨迹与语言任务描述，实现多模态信息一致对齐。</p></article>
+        <article><span>05</span><h3>多物体与多布局变化</h3><p>通过物体类别、空间位置和组合关系变化，提高机器人对不同操作环境的适应能力。</p></article>
+        <article><span>06</span><h3>统一数据协议</h3><p>遵循标准化机器人学习数据格式组织 Episode，支持模型训练、评估与跨平台应用。</p></article>
+      </div>
+      <p class="data-format-note reference-note"><strong>参考资料：</strong><a href="https://dreamlabs.ai/beta-tester-guide/" target="_blank" rel="noreferrer">Dream Labs Recording Guide</a><span> · </span><a href="https://arxiv.org/abs/2403.12945" target="_blank" rel="noreferrer">DROID Dataset Paper</a><span> · </span><a href="https://arxiv.org/abs/2308.12952" target="_blank" rel="noreferrer">BridgeData V2 Paper</a><span> · </span><a href="https://arxiv.org/abs/2310.08864" target="_blank" rel="noreferrer">Open X-Embodiment Paper</a></p>
+    </section>
+  </main>
+
+  <footer><div class="shell"><span>UNITREE ATOMIC TASK LIBRARY</span><span>12 SCENES · 20 FAMILIES · 200 UNIVERSAL TASKS</span></div></footer>
+  <dialog id="familyDialog"><button class="dialog-close" id="dialogClose" aria-label="关闭">×</button><div id="dialogContent"></div></dialog>
+  <dialog id="sceneDialog" class="scene-dialog"><button class="dialog-close" id="sceneDialogClose" aria-label="关闭">×</button><div id="sceneDialogContent"></div></dialog>
+  <script src="data.js"></script>
+  <script src="prompts.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

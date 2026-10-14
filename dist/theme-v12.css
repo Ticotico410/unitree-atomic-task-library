@@ -1,0 +1,5 @@
+:root{--coffee:#8b6848}
+.scene-card:before,.family-card:before{background:var(--coffee)!important}
+.scene-card b{font:700 14px var(--sans);letter-spacing:0;color:var(--ink)}
+.example-label{color:var(--ink);font-weight:700}
+.dream-examples i,.dialog-eg strong,.dialog-eg i{color:var(--ink);font-weight:700}

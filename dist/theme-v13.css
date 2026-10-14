@@ -1,0 +1,5 @@
+.hero-actions{flex-wrap:wrap}
+.hero-browse{width:auto;min-width:220px}
+.hero-families{min-width:292px}
+.hero-inline-link{display:inline;font-style:normal}
+@media(max-width:620px){.hero-actions{display:grid;grid-template-columns:1fr}.hero-browse,.hero-families{width:100%;max-width:none;min-width:0}}

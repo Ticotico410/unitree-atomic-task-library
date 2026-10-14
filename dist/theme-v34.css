@@ -1,0 +1,15 @@
+.task-row{grid-template-columns:72px minmax(0,1fr);gap:24px;padding:26px}
+.task-row-index{font:600 12px var(--mono);color:var(--orange);letter-spacing:.04em;padding-top:5px}
+.task-main h3{font-size:23px;margin:0 0 12px}
+.task-badges{margin-bottom:20px}
+.task-detail{grid-template-columns:1.35fr .85fr;gap:10px}
+.detail{padding:16px 18px;background:#efebe2}
+.detail small{font:700 10px var(--sans);color:var(--ink);margin-bottom:8px}
+.detail p{font-size:14px;line-height:1.75;color:var(--muted)}
+.prompt{display:block;margin-top:10px;padding:16px 18px;background:#efebe2;color:var(--ink)}
+.prompt strong{display:block;margin:0 0 8px;color:var(--ink);font:700 10px var(--sans)}
+.prompt q{display:block;font:400 14px/1.75 var(--sans);color:var(--muted)}
+@media(max-width:620px){
+  .task-row{grid-template-columns:1fr;padding:20px;gap:8px}
+  .task-detail{grid-template-columns:1fr}
+}
