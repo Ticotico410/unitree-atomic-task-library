@@ -1,0 +1,3 @@
+.task-definition{grid-template-columns:1fr}
+.task-definition .task-goal-detail,.task-definition .instance-detail{grid-column:1/-1}
+.instance-detail .instance-select{margin-top:10px}
