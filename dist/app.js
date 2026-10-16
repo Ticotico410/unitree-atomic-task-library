@@ -17,7 +17,7 @@ function visibleFamilies(){return TASK_FAMILIES.map(f=>({...f,matched:f.tasks.fi
 function escapeHtml(v){return String(v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
 function splitTaskItems(items){const parts=String(items).split(/[、，,]/).map(v=>v.trim()).filter(Boolean);return{primary:parts[0]||"目标物体",parts}}
 function primaryObject(task){return task.primaryObject||splitTaskItems(task.items).primary}
-function fixedReferences(task){const {parts}=splitTaskItems(task.items),primary=primaryObject(task);let removed=false;const references=parts.filter(part=>{if(!removed&&(part.includes(primary)||primary.includes(part))){removed=true;return false}return true});if(!removed)references.shift();return references.join("、")||"无固定参照物"}
+function fixedReferences(task){if(task.fixedObjects)return task.fixedObjects;const {parts}=splitTaskItems(task.items),primary=primaryObject(task);let removed=false;const references=parts.filter(part=>{if(!removed&&(part.includes(primary)||primary.includes(part))){removed=true;return false}return true});if(!removed)references.shift();return references.join("、")||"无固定参照物"}
 function instanceObject(task,variant){const primary=primaryObject(task);return variant.en?`${variant.zh}${primary}`:primary}
 function escapeRegExp(value){return String(value).replace(/[.*+?^${}()|[\]\\]/g,"\\$&")}
 function instancePrompt(task,variant){if(!variant.en)return task.prompt;const target=task.primaryObjectEn||"";if(target&&new RegExp(escapeRegExp(target),"i").test(task.prompt)){return task.prompt.replace(new RegExp(escapeRegExp(target),"i"),`${variant.en} ${target}`)}return`${task.prompt} using the ${variant.en} ${target||"object"}`}
