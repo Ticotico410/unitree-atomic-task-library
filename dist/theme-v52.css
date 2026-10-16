@@ -1,0 +1,13 @@
+.material-instance-control{display:grid;grid-template-columns:minmax(0,1fr) 38px;align-items:stretch}
+.material-instance-control select{grid-column:1;border-right:0}
+.material-instance-edit-trigger,.material-instance-edit-save{
+  display:grid;place-items:center;width:38px;height:40px;padding:0;border:1px solid #d2ccbf;background:#fffdf8;
+  color:var(--coffee);cursor:pointer
+}
+.material-instance-edit-trigger{grid-column:2}
+.material-instance-edit-trigger:hover,.material-instance-edit-save:hover{background:#ebe4d9;border-color:var(--coffee)}
+.material-instance-edit-trigger svg,.material-instance-edit-save svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.material-instance-edit-box{grid-column:1/3;display:grid;grid-template-columns:minmax(0,1fr) 38px}
+.material-instance-edit-box[hidden],.material-instance-select[hidden],.material-instance-edit-trigger[hidden]{display:none}
+.material-instance-edit-box input{grid-column:1;border-right:0}
+.material-instance-edit-save{grid-column:2}
