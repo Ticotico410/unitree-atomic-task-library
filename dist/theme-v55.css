@@ -1,0 +1,13 @@
+.material-register-head{display:flex;align-items:flex-start;justify-content:space-between;gap:24px}
+.editor-access{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.editor-mode-state{color:var(--muted);font:600 10px var(--mono);letter-spacing:.08em;white-space:nowrap}
+.editor-unlock{border:1px solid var(--coffee);border-radius:999px;background:var(--coffee);color:#fff;padding:8px 13px;font:600 12px var(--sans);cursor:pointer;transition:transform .2s ease,box-shadow .2s ease,opacity .2s ease}
+.editor-unlock:hover:not(:disabled){transform:translateY(-1px);box-shadow:0 8px 18px rgba(93,69,44,.2)}
+.editor-unlock:disabled{cursor:default;opacity:.72}
+.scene-dialog-body.is-editing .editor-mode-state{color:var(--orange)}
+.material-category input:disabled,.material-category button:disabled,.material-add:disabled{cursor:not-allowed}
+.material-category input:disabled{color:var(--ink);opacity:.78;background:#f6f3ed}
+.material-category button:disabled,.material-add:disabled{opacity:.34}
+.material-instance-select{cursor:pointer}
+.material-save-status{min-height:18px;color:var(--coffee);font-weight:600}
+@media(max-width:720px){.material-register-head{flex-direction:column}.editor-access{width:100%;justify-content:space-between}}
