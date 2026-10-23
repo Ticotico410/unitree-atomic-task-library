@@ -79,3 +79,8 @@
   .task-add-meta label{flex:1 1 100%}
   .task-add-meta select,.task-add-meta input{width:100%;max-width:none}
 }
+
+/* Keep all inline “add” entry points visually identical. */
+.scene-dialog-body .material-add{margin-top:12px;border:1px solid var(--orange);border-radius:999px;background:var(--orange);color:#fff;padding:8px 13px;font:600 12px var(--sans);cursor:pointer;white-space:nowrap;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.scene-dialog-body .material-add:hover:not(:disabled){transform:translateY(-1px);background:#c66722;box-shadow:0 8px 18px rgba(184,92,37,.22)}
+.scene-dialog-body .material-add:disabled{opacity:.38;cursor:not-allowed}
