@@ -1,7 +1,7 @@
 .task-add-panel{
   grid-template-columns:72px minmax(0,1fr);
   gap:24px;
-  margin:-10px 0 22px;
+  margin:0;
   padding:26px;
   border:1px solid var(--line);
   background:#faf8f2;
@@ -72,6 +72,7 @@
 .task-add-detail textarea{min-height:82px}
 .task-add-prompt{margin-top:10px}
 .task-add-actions{padding-top:12px}
+.task-add-trigger{margin-top:12px}
 @media(max-width:720px){
   .task-add-panel{grid-template-columns:1fr;padding:20px;gap:8px}
   .task-add-meta{align-items:stretch}
