@@ -1,0 +1,12 @@
+.family-card .family-desc{margin:18px 0 22px;padding-top:15px;border-top:1px solid #e5e2da}
+.family-card .family-desc-label{display:block;margin-bottom:7px;color:var(--orange);font:700 14px var(--sans);letter-spacing:0}
+.family-card .family-desc span{display:block}
+.scene-dialog-body .material-group{padding:0;margin-top:18px}
+.scene-dialog-body .material-group+.material-group{margin-top:22px;padding-top:22px;border-top:1px solid #ded9cf}
+.material-group-title{display:flex;align-items:center;margin:0 0 10px}
+.material-group-title strong{font-size:16px;color:var(--ink)}
+.material-add{margin-top:10px}
+.fixed-material-category>header{grid-template-columns:34px minmax(150px,240px) minmax(220px,1fr) 38px}
+.fixed-material-category .fixed-material-url,.fixed-material-category .material-link-cell,.fixed-material-category .material-url{min-width:0}
+.scene-dialog-body .material-actions{grid-template-columns:1fr auto;margin-top:14px}
+@media(max-width:620px){.fixed-material-category>header{grid-template-columns:1fr}.fixed-material-category .material-index{display:none}}
