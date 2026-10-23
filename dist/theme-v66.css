@@ -1,0 +1,15 @@
+.family-card .family-desc{margin:18px 0 22px;padding-top:15px;border-top:1px solid #e5e2da}
+.family-card .family-desc-label{display:block;margin-bottom:7px;color:var(--orange);font:700 14px var(--sans);letter-spacing:0}
+.family-card .family-desc span{display:block}
+.material-group{margin-top:28px}
+.material-group+.material-group{padding-top:28px;border-top:1px solid #ded9cf}
+.material-group-title{display:flex;align-items:baseline;justify-content:space-between;margin:0 0 12px}
+.material-group-title strong{font-size:16px;color:var(--ink)}
+.material-group-title span{font:11px var(--mono);color:#878276}
+.material-add{margin-top:12px}
+.fixed-material-category>header{grid-template-columns:34px minmax(150px,240px) minmax(220px,1fr) 38px}
+.fixed-material-category .fixed-material-url{min-width:0}
+.fixed-material-category .material-link-cell{min-width:0}
+.fixed-material-category .material-url{min-width:0}
+.scene-dialog-body .material-actions{grid-template-columns:1fr auto;margin-top:18px}
+@media(max-width:620px){.fixed-material-category>header{grid-template-columns:1fr}.fixed-material-category .material-index{display:none}.material-group-title{align-items:center}}
