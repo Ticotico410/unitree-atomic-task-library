@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="面向 Unitree G1-D 与 R1-A7-D 半身人形机器人的 12 类桌面场景、20 种任务类别原子操作任务库。" />
-  <title>Unitree 桌面原子任务库</title>
+  <title>Unitree 原子任务库 · 上海数采厂全身原子任务库</title>
   <link rel="preload" as="image" href="assets/g1-d-v3.webp" type="image/webp">
   <link rel="preload" as="image" href="assets/r1-a7-d-v3.webp" type="image/webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,16 +34,20 @@
   <link rel="stylesheet" href="theme-v60.css" />
   <link rel="stylesheet" href="theme-v62.css" />
   <link rel="stylesheet" href="theme-v68.css" />
-  <link rel="stylesheet" href="theme-v73.css?v=77" />\n  <link rel="stylesheet" href="theme-v74.css" />
+  <link rel="stylesheet" href="theme-v73.css?v=77" />
+  <link rel="stylesheet" href="theme-v74.css" />
   <link rel="stylesheet" href="theme-v75.css" />
+  <link rel="stylesheet" href="hero-switch.css" />
 </head>
 <body>
-  <header class="hero" id="top">
+  <div class="hero-scroll" id="top">
+  <header class="hero">
     <nav class="nav shell">
       <a class="brand unitree-brand" href="https://www.unitree.com/cn" target="_blank" rel="noreferrer" aria-label="访问 Unitree 官方网站"><img src="assets/unitree-logo.svg" alt="Unitree" /></a>
       <div class="nav-meta"><span>12 SCENES</span><span>20 FAMILIES</span><span>EXPANDABLE TASKS</span></div>
     </nav>
-    <div class="hero-grid shell">
+    <div class="hero-slides">
+    <div class="hero-grid shell hero-slide" id="desktopHero" role="group" aria-label="桌面操作原子任务库">
       <div class="hero-copy">
         <h1>桌面操作<br><span>原子任务库</span></h1>
         <p class="lede">本数据集基于宇树 G1-D 与 R1-A7-D 半身人形机器人构建，采用 Dex1 夹爪与 6DoF 灵巧手两类末端执行器，覆盖 <strong class="hero-inline-link">12 类桌面操作场景</strong>、<strong class="hero-inline-link">20 种任务类别及原子操作任务库</strong>，面向日常生活、办公、工业、医疗等多领域桌面操作需求，为机器人大模型训练提供多样化数据支持。</p>
@@ -65,7 +69,32 @@
         <div class="stage-status"><i></i><span>SHARED TASK SPACE</span><b>EXPANDABLE TASK LIBRARY</b></div>
       </div>
     </div>
+    <div class="hero-grid shell hero-slide" id="fullBodyHero" role="group" aria-label="上海数采厂全身原子任务库">
+      <div class="hero-copy">
+        <h1 class="full-body-title">上海数采厂<br><span>全身原子任务库</span></h1>
+        <p class="lede">本原子任务库基于宇树G1人形机器人构建，采用多种末端执行器，覆盖<strong class="hero-inline-link">8类操作场景</strong>，面向办公、物流、卧室等多领域操作需求，为机器人大模型训练提供多样化数据支持。</p>
+        <div class="hero-actions"><a class="button primary hero-browse hero-scenes" href="#scenes"><span>全身任务操作场景</span><b>↘</b></a><a class="button primary hero-browse hero-families" href="#families"><span>浏览任务类别及原子任务库</span><b>↘</b></a></div>
+      </div>
+      <div class="hero-visual robot-stage full-body-stage" aria-label="G1 全身人形机器人">
+        <div class="stage-grid" aria-hidden="true"></div>
+        <div class="stage-code" aria-hidden="true"><span>FULL BODY</span><span>HUMANOID</span><span>DATASET</span></div>
+        <figure class="robot-card robot-g1">
+          <img src="assets/g1-full-body.webp" alt="Unitree G1 全身人形机器人" width="465" height="972" decoding="async" fetchpriority="high" />
+          <figcaption><span>EMBODIMENT / 01</span><strong>G1</strong></figcaption>
+          <a class="robot-card-link" href="https://www.unitree.com/cn/g1" target="_blank" rel="noreferrer" aria-label="访问 Unitree G1 官方页面"></a>
+        </figure>
+        <figure class="robot-card robot-r1">
+          <img src="assets/g1-full-body.webp" alt="Unitree G1 全身人形机器人" width="465" height="972" decoding="async" fetchpriority="high" />
+          <figcaption><span>EMBODIMENT / 02</span><strong>G1</strong></figcaption>
+          <a class="robot-card-link" href="https://www.unitree.com/cn/g1" target="_blank" rel="noreferrer" aria-label="访问 Unitree G1 官方页面"></a>
+        </figure>
+        <div class="stage-status"><i></i><span>SHARED TASK SPACE</span><b>EXPANDABLE TASK LIBRARY</b></div>
+      </div>
+    </div>
+    </div>
+    <div class="hero-switch shell" aria-label="切换任务库"><button type="button" data-hero-slide="0" aria-pressed="true">桌面操作</button><span aria-hidden="true">← 滚动切换 →</span><button type="button" data-hero-slide="1" aria-pressed="false">全身操作</button></div>
   </header>
+  </div>
 
   <main>
     <section class="scenes" id="scenes">
@@ -144,5 +173,6 @@
   <script src="data.js"></script>
   <script src="prompts.js"></script>
 <script src="app-v83.js"></script>
+<script src="hero-switch.js"></script>
 </body>
 </html>
