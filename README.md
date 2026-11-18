@@ -7,9 +7,11 @@
 - **推荐公开地址（GitHub Pages）：** https://ticotico410.github.io/unitree-atomic-task-library/
 - **备用地址（ChatGPT Sites）：** https://unitree-atomic-task-library.smokyocean8.chatgpt.site
 
-GitHub Pages 无需登录即可公开访问。仓库 `main` 或 `test` 分支更新后，`.github/workflows/pages.yml` 会自动将 `dist/` 目录重新部署到上述公开地址。
+GitHub Pages 无需登录即可公开访问。仓库 `main` 分支更新后，`.github/workflows/pages.yml` 会自动将 `dist/` 目录重新部署到上述公开地址。
 
 ## 本地预览
+
+`test` 分支用于本地预览，不会在推送时自动部署官网。
 
 ```bash
 cd dist
